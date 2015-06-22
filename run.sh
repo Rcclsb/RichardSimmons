@@ -6,4 +6,3 @@ script
 # Start Hubot
 exec sh /bin/starthubot.sh
 echo "Finishing script..."
-end script
