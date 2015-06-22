@@ -4,5 +4,5 @@ chmod u+x bin/starthubot.sh
 echo "Beginning Script..."
 script
 # Start Hubot
-./bin/starthubot.sh
+exec /bin/starthubot.sh
 end script
