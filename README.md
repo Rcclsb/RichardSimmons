@@ -12,6 +12,18 @@ has, etc!
 [hubot]: http://hubot.github.com
 [generator-hubot]: https://github.com/github/generator-hubot
 
+## Scripts
+#### Deep Thoughts 
+##### Trigger: deep
+This accesses a randomiser that creates a faux deep though.
+#### Ping Pong
+##### Trigger: ping
+Return:
+    pong
+    PONG
+
+
+
 ### Running richardsimmons Locally
 
 You can test your hubot by running the following, however some plugins will not
