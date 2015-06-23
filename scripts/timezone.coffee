@@ -5,6 +5,11 @@ module.exports = (robot) ->
         d = new Date()
         miliTime = d.getTime();
         city = res.match[1]
+        moment.tz.load({
+            zones : [],
+            links : [],
+            version : '2014e'
+        });
         time = moment.tz(miliTime, city);
         if moment.tz.zone(city) isnt null
             res.reply "The time in #{city} is now. In #{city} it is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
