@@ -20,13 +20,25 @@ This accesses a randomiser that creates a faux deep though.
     {"id": 259, "thought":"Consider the daffodil. And while you're doing that, I'll be over here, looking through your stuff."}
 #### Ping Pong
 ##### Trigger: ping
-Return:
+Returns:
 
     pong
     PONG
 
+#### Time Zone
+##### Trigger: time in <city>
+You input a city and it returns the time in that city. 
+For example: time in New York
 
+    In New York it is now June 23rd 2015, 4:54:19 pm
 
+If the city does not exist it will returns an error message and and the current UTC time.
+For example: time in GameOfWinterfell
+
+    GameOfWinterfell is not a vaid city. UTC is now June 23rd 2015, 8:55:49 pm. If it is within a small country try typing the country.
+
+##### Trigger: list of times
+This returns a list of all of the cities that can be called by richardsimmons.
 ### Running richardsimmons Locally
 
 You can test your hubot by running the following, however some plugins will not
