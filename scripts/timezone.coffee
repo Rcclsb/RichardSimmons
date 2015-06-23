@@ -46,6 +46,7 @@ module.exports = (robot) ->
   robot.respond /list of times/i, (res) ->
     res.reply(moment.tz.names())
     
-String.prototype.capitalize = function() {
-  return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
-};
+String.prototype.capitalize ->
+  return this.replace(/(?:^|\s)\S/g, (a) -> 
+    return a.toUpperCase()
+  )
