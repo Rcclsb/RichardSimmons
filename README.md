@@ -16,6 +16,8 @@ has, etc!
 #### Deep Thoughts 
 ##### Trigger: deep
 This accesses a randomiser that creates a faux deep though.
+
+    {"id": 259, "thought":"Consider the daffodil. And while you're doing that, I'll be over here, looking through your stuff."}
 #### Ping Pong
 ##### Trigger: ping
 Return:
