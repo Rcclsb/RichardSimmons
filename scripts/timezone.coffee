@@ -11,7 +11,7 @@ module.exports = (robot) ->
             links : [],
             version : '2014e'
         });
-        time = moment.tz(miliTime, city);
+        moment.tz.add('America/San_Francisco|PST PDT|80 70|0101|1Lzm0 1zb0 Op0')
         if moment.tz.zone("America/"+city) isnt null
             prefix = "America/"
         else if moment.tz.zone("Asia/"+city) isnt null
