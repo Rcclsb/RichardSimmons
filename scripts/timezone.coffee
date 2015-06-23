@@ -1,5 +1,5 @@
 moment = require('moment-timezone')
-geocode = reqire('geocode')
+geocode = require('geocode')
 module.exports = (robot) ->
     robot.respond /time in (.*)/i, (res) ->
         city = res.match[1]
