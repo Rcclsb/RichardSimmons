@@ -5,7 +5,14 @@ module.exports = (robot) ->
     d = new Date()
     miliTime = d.getTime()
     city = res.match[1].replace(" ", "_")
-    city =  (city[0].toUpperCase() + city[1].toLowerCase() for word in city.split /\s+/).join ' '
+    words = city.split(" ")
+    cappedWords = []
+    for (j = 0, len = words.length; j < len; j++) {
+      cappedWords.push(words[j])
+      cappedWords[j].toLowerCase()
+      cappedWords[j][0].toUpperCase()
+    }
+    city = cappedWords.join().replace(",", " ")
     prefix = ""
     moment.tz.load({
       zones : [],
