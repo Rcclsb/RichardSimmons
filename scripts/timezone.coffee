@@ -9,7 +9,7 @@ module.exports = (robot) ->
     city = res.match[1].replace(" ", "_")
     words = city.split(" ")
     cappedWords = []
-    makeCappedWords for item in words 
+    makeCappedWords item for item in words 
     city = cappedWords.join().replace(",", " ")
     prefix = ""
     moment.tz.load({
