@@ -45,3 +45,7 @@ module.exports = (robot) ->
       res.reply "#{city.replace("_", " ")} is not a vaid city. UTC is now #{time.format('MMMM Do YYYY, h:mm:ss a')}. If it is within a small country try typing the country."
   robot.respond /list of times/i, (res) ->
     res.reply(moment.tz.names())
+    
+String.prototype.capitalize = function() {
+  return this.replace(/(?:^|\s)\S/g, function(a) { return a.toUpperCase(); });
+};
