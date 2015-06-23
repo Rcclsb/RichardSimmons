@@ -1,3 +1,4 @@
+moment = require('moment-timezone')
 module.exports = (robot) ->
     robot.respond /time in (.*)/i, (res) ->
         city = res.match[1]
