@@ -4,7 +4,7 @@ module.exports = (robot) ->
     robot.respond /time in (.*)/i, (res) ->
         d = new Date()
         miliTime = d.getTime();
-        city = res.match[1]
+        city = res.match[1].replace(" ", "_")
         prefix = ""
         moment.tz.load({
             zones : [],
