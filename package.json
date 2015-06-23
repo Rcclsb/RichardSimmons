@@ -5,6 +5,7 @@
   "author": "rcclsb@gmail.com",
   "description": "A simple helpful robot for your Company",
   "dependencies": {
+    "geocode": "0.0.3",
     "hubot": "^2.13.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.1.5",
