@@ -25,7 +25,7 @@ module.exports = (robot) ->
       prefix = "Asia/"
     else if moment.tz.zone("Europe/"+city) isnt null
       prefix = "Europe/"
-    else if moment.tz.zone("Indiana/"+city) isnt null
+    else if moment.tz.zone("America/Indiana/"+city) isnt null
       prefix = "America/Indiana/"
     else if moment.tz.zone("Australia/"+city) isnt null
       prefix = "Australia/"
