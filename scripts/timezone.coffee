@@ -1,7 +1,7 @@
 module.exports = (robot) ->
-    robot.respond /open the (.*) doors/i, (res) ->
-        doorType = res.match[1]
-        if doorType is "pod bay"
-            res.reply "I'm afraid I can't let you do that."
+    robot.respond /time in (.*)/i, (res) ->
+        city = res.match[1]
+        if city is "New York"
+            res.reply "Honestly?"
         else
-            res.reply "Opening #{doorType} doors"
+            res.reply "The time in #{city} is now."
