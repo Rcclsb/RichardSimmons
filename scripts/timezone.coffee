@@ -1,5 +1,7 @@
 moment = require('moment-timezone')
 geocode = require('geocode')
+cappedWords = []
+words=[]
 module.exports = (robot) ->
   robot.respond /time in (.*)/i, (res) ->
     d = new Date()
@@ -7,11 +9,7 @@ module.exports = (robot) ->
     city = res.match[1].replace(" ", "_")
     words = city.split(" ")
     cappedWords = []
-    for (j = 0, len = words.length; j < len; j++) {
-      cappedWords.push(words[j])
-      cappedWords[j].toLowerCase()
-      cappedWords[j][0].toUpperCase()
-    }
+    makeCappedWords for item in words 
     city = cappedWords.join().replace(",", " ")
     prefix = ""
     moment.tz.load({
@@ -55,4 +53,8 @@ module.exports = (robot) ->
       
   robot.respond /list of times/i, (res) ->
     res.reply(moment.tz.names())
-    
+   
+  makeCappedWords = (word) ->
+    cappedWords.push(word)
+    cappedWords[cappedWords.length-1].toLowerCase()
+    cappedWords[cappedWords.length-1][0].toUpperCase()
