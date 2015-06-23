@@ -40,9 +40,9 @@ module.exports = (robot) ->
         time = moment.tz(miliTime, prefix+city);
         
         if moment.tz.zone(prefix+city) isnt null
-            res.reply "In #{city} it is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
+            res.reply "In #{city.replace("_", " ")} it is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
         else 
-            res.reply "#{city} is not a vaid city. UTC is now #{time.format('MMMM Do YYYY, h:mm:ss a')}. If it is within a small country try typing the country."
+            res.reply "#{city.replace("_", " ")} is not a vaid city. UTC is now #{time.format('MMMM Do YYYY, h:mm:ss a')}. If it is within a small country try typing the country."
         
     robot.respond /list of times/i, (res) ->
         res.reply(moment.tz.names())
