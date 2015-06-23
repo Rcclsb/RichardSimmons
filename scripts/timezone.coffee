@@ -1,7 +1,5 @@
 module.exports = (robot) ->
     robot.respond /time in (.*)/i, (res) ->
         city = res.match[1]
-        if city is "New York"
-            res.reply "Honestly?"
-        else
-            res.reply "The time in #{city} is now."
+        time = moment.tz("2013-11-18 11:55", "America/New York");
+        res.reply "The time in #{city} is now. And the time in New York is #{time}"
