@@ -11,10 +11,10 @@ module.exports = (robot) ->
             version : '2014e'
         });
         time = moment.tz(miliTime, city);
-        if moment.tz.zone(city) isnt null
+        if (moment.tz.zone(city) !== null){
             res.reply "The time in #{city} is now. In #{city} it is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
-        else 
+        } else { 
             res.reply "#{city} is not a vaid city. UTC is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
-            
+        }
     robot.respond /list of times/i, (res) ->
         res.reply(moment.tz.names())
