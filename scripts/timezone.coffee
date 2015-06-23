@@ -6,7 +6,7 @@ module.exports = (robot) ->
         miliTime = d.getTime();
         city = res.match[1]
         time = moment.tz(miliTime, city);
-        if time isnt moment.tz(miliTime, "UTC") and city isnt "UTC"
+        if moment.tz.zone(city) isnt false and city isnt "UTC"
             res.reply "The time in #{city} is now. In #{city} it is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
         else 
             res.reply "#{city} is not a vaid city. UTC is now #{time.format('MMMM Do YYYY, h:mm:ss a')}"
