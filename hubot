@@ -1,0 +1,44 @@
+NAME="Hubot"
+LOGFILE="/var/log/hubot.log"
+PIDFILE="/var/run/hubot.pid"
+HOME="/home/hubot"
+DAEMON="$HOME/node_modules/hubot/bin/hubot -- --adapter slack"
+ 
+set -e
+ 
+ 
+start(){
+  echo -n "Starting $NAME: "
+  . /home/hubot/.hubotrc
+  echo "Trying to start Hubot" > $LOGFILE
+  start-stop-daemon -S -p $PIDFILE -c hubot:hubot -m -b -d $HOME -x $DAEMON >> $LOGFILE 2>&1 
+  #                 ^Start pidfile     chuid make-pid background changedir execute
+  echo "Success"
+}
+ 
+stop(){
+  echo -n "Stopping $NAME: "
+  start-stop-daemon -K -p $PIDFILE >> $LOGFILE 2>&1
+  echo "Success"
+}
+ 
+case "$1" in
+  start)
+    start
+    ;;
+  stop)
+    stop
+  ;;
+ 
+  restart)
+    stop
+    start
+    ;;
+ 
+  *)
+    N=/etc/init.d/$NAME
+    echo "Usage: $N {start|stop|restart}" >&2
+    exit 1
+    ;;
+esac
+exit
