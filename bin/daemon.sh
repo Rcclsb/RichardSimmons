@@ -1,8 +1,8 @@
-USER_HOME="/home/$USER"
-HUBOT_ROOT="$USER_HOME/RichardSimmons"
-HUBOT_HOME="$HUBOT_ROOT/node_modules/hubot"
+USER_HOME="/home/rcohen"
+HUBOT_ROOT="rcohen/RichardSimmons"
+HUBOT_HOME="$HUBOT_ROOT/"
 DAEMON="$HUBOT_HOME/bin/hubot"
-PIDFILE=$HUBOT_ROOT/hubot.pid
+PIDFILE=$HUBOT_ROOT/hubot.pids
 
 case "$1" in
 start)
