@@ -1,5 +1,4 @@
 module.exports = function (robot){
-    robot.respond(/ping$/i, msg){
+    robot.respond /ping$/i, (msg) ->
     msg.send "pong"
-    }   
 }
