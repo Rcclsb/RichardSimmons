@@ -26,7 +26,7 @@
 # Author:
 #   codec
 
-   HUBOT_JIRA_URL="https://waybetter.atlassian.net/"
+   HUBOT_JIRA_URL="https://waybetter.atlassian.net/secure/"
    HUBOT_JIRA_USER = "rcclsb@gmail.com"
    HUBOT_JIRA_PASSWORD = "roberto0417"
 
