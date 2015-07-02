@@ -1,5 +1,5 @@
 USER_HOME="/home/rcohen"
-HUBOT_ROOT="rcohen/RichardSimmons"
+HUBOT_ROOT="$USER_HOME/RichardSimmons"
 HUBOT_HOME="$HUBOT_ROOT/"
 DAEMON="$HUBOT_HOME/bin/hubot"
 PIDFILE=$HUBOT_ROOT/hubot.pids
