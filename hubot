@@ -1,4 +1,4 @@
-NAME="Hubot"
+NAME="Richard_Simmons"
 LOGFILE="/var/log/hubot.log"
 PIDFILE="/var/run/hubot.pid"
 HOME="/home/hubot"
