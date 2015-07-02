@@ -1,7 +1,7 @@
 NAME="Richard_Simmons"
 LOGFILE="/var/log/hubot.log"
 PIDFILE="/var/run/hubot.pid"
-HOME="/home/hubot"
+HOME="/home/rcohen/RichardSimmons"
 DAEMON="$HOME/node_modules/hubot/bin/hubot -- --adapter slack"
  
 set -e
