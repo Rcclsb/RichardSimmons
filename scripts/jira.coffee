@@ -92,6 +92,7 @@ class RecentIssues
 
 
 module.exports = (robot) ->
+  print robot
   filters = new IssueFilters robot
 
   useV2 = process.env.HUBOT_JIRA_USE_V2 != "false"
@@ -180,6 +181,7 @@ module.exports = (robot) ->
       return
 
     watchers msg, msg.match[3], (text) ->
+      print text
       msg.send text
   
   robot.respond /search (for )?(.*)/i, (msg) ->
@@ -201,6 +203,7 @@ module.exports = (robot) ->
       ticket = (matched.match /(\w+-[0-9]+)/)[0]
       if !recentissues.contains msg.message.user.room+ticket
         info msg, ticket, (text) ->
+          print text
           msg.send text
         recentissues.add msg.message.user.room+ticket
 
