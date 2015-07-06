@@ -111,6 +111,8 @@ module.exports = (robot) ->
       authdata = new Buffer(process.env.HUBOT_JIRA_USER+':'+process.env.HUBOT_JIRA_PASSWORD).toString('base64')
       httprequest = httprequest.header('Authorization', 'Basic ' + authdata)
     httprequest.get() (err, res, body) ->
+        if(err != null)
+            console.log "ERROR:" + err.toString()
         console.log body
         cb JSON.parse(body)
 
