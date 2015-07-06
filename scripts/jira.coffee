@@ -89,6 +89,8 @@ class RecentIssues
 
 module.exports = (robot) ->
   console.log robot
+  console.log process.env.HUBOT_JIRA_URL
+  console.log process.env.HUBOT_JIRA_USER
   filters = new IssueFilters robot
 
   useV2 = process.env.HUBOT_JIRA_USE_V2 != "false"
