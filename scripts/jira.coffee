@@ -8,6 +8,7 @@
 #   HUBOT_JIRA_URL
 #   HUBOT_JIRA_USER
 #   HUBOT_JIRA_PASSWORD
+#   HUBOT_JIRA_USER_AGENT
 #   Optional environment variables:
 #   HUBOT_JIRA_USE_V2 (defaults to "true", set to "false" for JIRA earlier than 5.0)
 #   HUBOT_JIRA_MAXLIST
@@ -112,6 +113,7 @@ module.exports = (robot) ->
       authdata = new Buffer(process.env.HUBOT_JIRA_USER+':'+process.env.HUBOT_JIRA_PASSWORD).toString('base64')
       console.log authdata
       httprequest = httprequest.header('Authorization', 'Basic ' + authdata)
+      httprequest = httprequest.header('User-Agent', process.env.HUBOT_JIRA_USER_AGENT)
       console.log httprequest
     httprequest.get() (err, res, body) ->
         if(err != null)
