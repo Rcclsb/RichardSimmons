@@ -107,6 +107,7 @@ module.exports = (robot) ->
     console.log(process.env.HUBOT_JIRA_URL + "/rest/api/latest/" + where)
 
     httprequest = msg.http(process.env.HUBOT_JIRA_URL + "/rest/api/latest/" + where)
+    console.log httprequest
     if (process.env.HUBOT_JIRA_USER)
       authdata = new Buffer(process.env.HUBOT_JIRA_USER+':'+process.env.HUBOT_JIRA_PASSWORD).toString('base64')
       console.log authdata
