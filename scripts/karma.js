@@ -1,3 +1,24 @@
+// Description:
+//   A handy tool or karma.
+//
+// Dependencies:
+//  None
+//
+// Configuration:
+//   None
+//
+// Commands:
+//   hubot Karmabot <person>++ - up votes the person +1
+//   hubot Karmabot <person>-- - down votes the person -1
+//   hubot Karmabot karma value <person> - up votes the person +1
+//
+// Notes:
+//   None
+//
+// Author:
+//   rcclsb
+
+
 var positiveKey = encodeURIComponent("++");
 var negativeKey = encodeURIComponent("--");
 var karmaGetKey = encodeURIComponent("karma value ");
