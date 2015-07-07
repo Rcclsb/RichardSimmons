@@ -1,4 +1,4 @@
-USER_HOME="/home/rcohen"
+USER_HOME="/usr/local"
 HUBOT_ROOT="$USER_HOME/RichardSimmons"
 HUBOT_HOME="$HUBOT_ROOT/"
 DAEMON="$HUBOT_HOME/bin/hubot"
