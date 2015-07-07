@@ -1,3 +1,22 @@
+# Description:
+#   A handy dandy tool for Timezones
+#
+# Dependencies:
+#   "moment-timezone"
+#   "geocode"
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot time in <city> - returns the time in that city
+#   hubot list of time - returns all timezones available
+#
+# Notes:
+#   None
+#
+# Author:
+#   rcclsb
 moment = require('moment-timezone')
 geocode = require('geocode')
 cappedWords = []
@@ -18,6 +37,7 @@ module.exports = (robot) ->
       version : '2014e'
     })
     moment.tz.add('America/San_Francisco|PST PDT|80 70|0101|1Lzm0 1zb0 Op0')
+    moment.tz.add('America/San_Diego|PST PDT|80 70|0101|1Lzm0 1zb0 Op0')
     
     if moment.tz.zone("America/"+city) isnt null
       prefix = "America/"

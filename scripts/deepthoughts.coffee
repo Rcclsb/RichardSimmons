@@ -1,3 +1,21 @@
+# Description:
+#   Delivers a random deep thought
+#
+# Dependencies:
+#   None
+#
+# Configuration:
+#   None
+#
+# Commands:
+#   hubot deep - Delivers a deep thought
+#
+# Notes:
+#   None
+#
+# Author:
+#   Andy Matthews
+#
 # Configures the plugin
 module.exports = (robot) ->
     # waits for the string "hubot deep" to occur
