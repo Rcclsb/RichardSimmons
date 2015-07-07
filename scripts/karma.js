@@ -15,7 +15,7 @@ client.on("error", function (err) {console.log("REDIS CLIENT ERROR--> " + err);}
 module.exports = function(robot){
     robot.respond(/Karmabot (.*)/i, function(res){
         messageText = res.match[1].replace("  ", "++");
-        username = "<@" + req.body.user_id + ">";
+        username = "<@" + res.message.user.name + ">";
         console.log(username);
         messageText = messageText.substring(slackBotCall.length, messageText.length);
         username = encodeURIComponent(username);
