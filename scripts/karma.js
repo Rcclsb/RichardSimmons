@@ -1,7 +1,7 @@
 var positiveKey = encodeURIComponent("++");
 var negativeKey = encodeURIComponent("--");
 var karmaGetKey = encodeURIComponent("karma value ");
-var slackBotCall = "Karmabot ";
+var slackBotCall = "";
 var redis = require("redis");
 var client = redis.createClient(6379, '52.26.218.235', {parser: "javascript", max_attempts: 5});
 var currentKarmaValue = "null0";
