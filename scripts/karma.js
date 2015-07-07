@@ -10,7 +10,7 @@
 // Commands:
 //   hubot Karmabot <person>++ - up votes the person +1
 //   hubot Karmabot <person>-- - down votes the person -1
-//   hubot Karmabot karma value <person> - up votes the person +1
+//   hubot Karmabot karma value <person> - returns the specified person's karma
 //
 // Notes:
 //   None
