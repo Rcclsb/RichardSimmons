@@ -28,8 +28,7 @@ module.exports = function(robot){
             console.log("In Karma Message...");
             setTimeout(function () {
                 console.log("Past Karma Message Path...");
-                res.reply("Not Implemented");
-                res.reply("Not Implemented");
+                res.reply(returnText);
             }, 300);
         } else if (processIsVoteMessage(messageText) !== "null") {
             processVoteMessage(messageText);
@@ -39,7 +38,7 @@ module.exports = function(robot){
                 console.log("Past Vote Message Path One...");
                 setTimeout(function () {
                     console.log("Past Vote Message Path Two...");
-                    res.reply("Not Implemented");
+                    res.reply(returnText);
                 }, 300);
             }, 250);
         } else {
