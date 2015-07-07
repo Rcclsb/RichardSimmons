@@ -10,7 +10,7 @@
 #
 # Commands:
 #   hubot time in <city> - returns the time in that city
-#   hubot list of time - returns all timezones available
+#   hubot list of times - returns all timezones available
 #
 # Notes:
 #   None
